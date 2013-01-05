@@ -13,12 +13,26 @@ class Todo < Array
   end 
   
   def show_done
-    self.each do
-    |item|
+    check_for_done = Proc.new do
+      self.each do
+      |item| 
       if item[:done] == true
         puts item[:item]
       end
-      end
+    end
+    end
+    if check_for_done.call == nil
+    puts "Nothing Done!"
+    end
+   # self.each do
+   # |item|
+    #  if item[:done] == true
+     #   puts item[:item]
+     # else
+      #  break 
+      # puts "Nothing done"
+     # end
+     # end
   end
 
   def check_off id_number
