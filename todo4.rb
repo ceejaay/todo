@@ -20,11 +20,11 @@ class Todo < Array
         completed_items << list_item
       end
     end
-    if completed_items.length == 0
+    if completed_items.empty?
      return "Nothing done yet!"
     else completed_items.each do
       |item|
-      puts item[:item]
+      return item[:item]
     end
     end
   end
