@@ -20,11 +20,12 @@ class Todo < Array
         completed_items << list_item
       end
     end
+
     if completed_items.empty?
-     return "Nothing done yet!"
+      return "Nothing done yet!"
     else completed_items.each do
       |item|
-      return item[:item]
+        return item[:item]
     end
     end
   end
@@ -32,18 +33,18 @@ class Todo < Array
   def check_off id_number
    self.each do
    |thing|
-   if thing[:id] == id_number
-     thing[:done] = true
-   end
+     if thing[:id] == id_number
+       thing[:done] = true
+     end
    end
   end
 
   def delete_item item_number
     self.each do
     |item|
-    if item[:id] == item_number
-    self.delete(item)
-    end
+      if item[:id] == item_number
+        self.delete(item)
+      end
     end
   end
 
