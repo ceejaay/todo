@@ -48,4 +48,11 @@ class Todo < Array
     end
   end
 
+
+  def show_all_items
+    self.each do
+      |items|
+      puts items[:item]
+      end
+  end
 end #end of todo class.
