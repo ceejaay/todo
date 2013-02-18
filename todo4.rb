@@ -57,6 +57,11 @@ class Todo < Array
   end
   
   def seed_list_with_data
-
+    seed_array = ["Take out trash", "Wash car", "Go shopping", "Pay bills", "Program in ruby", "Prep Dinner", "Call Mom", "Make doc appointment" ]
+    seed_array.each do
+      |item|
+      self.new_item("#{item}")
+    end
   end
+
 end #end of todo class.
