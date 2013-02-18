@@ -1,9 +1,7 @@
-
 class Todo < Array
 
   def initialize
    Array.new
-   # @list = []
     @total_id_number =  0
   end
  
@@ -47,7 +45,6 @@ class Todo < Array
       end
     end
   end
-
 
   def show_all_items
     self.each do
