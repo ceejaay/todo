@@ -1,3 +1,4 @@
+require 'yaml'
 class Todo < Array
 
   def initialize
